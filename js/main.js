@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const populateCultureCards = () => {
       if (typeof cultureData !== "undefined") {
         const cardsHTML = cultureData
+          .slice(0, 6)
           .map(
             (culture) => `
                     <div class="card" data-id="${culture.id}">
@@ -76,23 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
           .join("");
         cultureListContainer.innerHTML = cardsHTML;
         updateAllFavoriteIcons();
-        renderCultureListOrder();
+        // Fungsi pengurutan (renderCultureListOrder) telah dihapus dari sini
       }
     };
 
-    const renderCultureListOrder = () => {
-      const fragment = document.createDocumentFragment();
-      const allCards = Array.from(
-        cultureListContainer.querySelectorAll(".card")
-      );
-      allCards.sort(
-        (a, b) =>
-          favorites.includes(b.dataset.id) - favorites.includes(a.dataset.id)
-      );
-      allCards.forEach((card) => fragment.appendChild(card));
-      cultureListContainer.innerHTML = "";
-      cultureListContainer.appendChild(fragment);
-    };
+    // Fungsi renderCultureListOrder telah dihapus seluruhnya
 
     const updateAllFavoriteIcons = () => {
       cultureListContainer.querySelectorAll(".favorite-btn").forEach((icon) => {
@@ -104,15 +93,19 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.target.matches(".favorite-btn")) {
         toggleFavorite(e.target.dataset.id);
         e.target.classList.toggle("favorited");
-        renderCultureListOrder();
+        // Fungsi pengurutan (renderCultureListOrder) telah dihapus dari sini
       }
     });
 
     searchBar.addEventListener("keyup", (e) => {
       const searchTerm = e.target.value.toLowerCase();
+      const displayedCards = cultureData.slice(0, 6).map(item => item.id);
+      
       cultureListContainer.querySelectorAll(".card").forEach((card) => {
-        const title = card.querySelector("h3").textContent.toLowerCase();
-        card.style.display = title.includes(searchTerm) ? "" : "none";
+        if (displayedCards.includes(card.dataset.id)) {
+            const title = card.querySelector("h3").textContent.toLowerCase();
+            card.style.display = title.includes(searchTerm) ? "" : "none";
+        }
       });
     });
 
@@ -157,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
     favoriteListContainer.addEventListener("click", function (e) {
       if (e.target.matches(".favorite-btn")) {
         toggleFavorite(e.target.dataset.id);
-        renderFavorites(); // Re-render halaman favorit setelah menghapus item
+        renderFavorites();
       }
     });
 
