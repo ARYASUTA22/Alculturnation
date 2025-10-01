@@ -1,535 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alculturnation - Budaya Akulturasi Indonesia</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- Header -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo nav-link" data-page="home">
-                    Alculturnation
-                </a>
-                <div class="nav-menu">
-                    <a href="#" class="nav-link active" data-page="home">Home</a>
-                    <div class="dropdown">
-                        <button class="dropdown-button">
-                            Budaya Akulturasi <span style="font-size: 0.75rem;">▼</span>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#" class="nav-link" data-page="kudus">Masjid Menara Kudus</a>
-                            <a href="#" class="nav-link" data-page="keroncong">Musik Keroncong</a>
-                            <a href="#" class="nav-link" data-page="wayang">Wayang Kulit</a>
-                            <a href="#" class="nav-link" data-page="kuliner">Kuliner Peranakan</a>
-                            <a href="#" class="nav-link" data-page="barongsai">Kesenian Barongsai</a>
-                            <a href="#" class="nav-link" data-page="blenduk">Gereja Blenduk</a>
-                            <a href="#" class="nav-link" data-page="gambang">Gambang Kromong</a>
-                            <a href="#" class="nav-link" data-page="lasem">Batik Lasem</a>
-                            <a href="#" class="nav-link" data-page="tabuik">Tradisi Tabuik</a>
-                        </div>
-                    </div>
-                </div>
-                <button id="mobile-menu-button" class="mobile-menu-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: block;">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-            </nav>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="#" class="nav-link" data-page="home">Home</a>
-            <a href="#" class="nav-link" data-page="kudus">Masjid Menara Kudus</a>
-            <a href="#" class="nav-link" data-page="keroncong">Musik Keroncong</a>
-            <a href="#" class="nav-link" data-page="wayang">Wayang Kulit</a>
-            <a href="#" class="nav-link" data-page="kuliner">Kuliner Peranakan</a>
-            <a href="#" class="nav-link" data-page="barongsai">Kesenian Barongsai</a>
-            <a href="#" class="nav-link" data-page="blenduk">Gereja Blenduk</a>
-            <a href="#" class="nav-link" data-page="gambang">Gambang Kromong</a>
-            <a href="#" class="nav-link" data-page="lasem">Batik Lasem</a>
-            <a href="#" class="nav-link" data-page="tabuik">Tradisi Tabuik</a>
-        </div>
+      <div class="container">
+        <nav class="navbar">
+          <a href="#" class="logo nav-link" data-page="home">
+            Alculturnation
+          </a>
+          <div class="nav-menu">
+            <a href="#" class="nav-link active" data-page="home">Home</a>
+            <a href="#" class="nav-link" data-page="favorites">Favorites</a>
+          </div>
+          <button id="mobile-menu-button" class="mobile-menu-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              style="display: block"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="#" class="nav-link" data-page="home">Home</a>
+        <a href="#" class="nav-link" data-page="favorites">Favorites</a>
+        <a href="#" class="nav-link" data-page="kudus">Masjid Menara Kudus</a>
+        <a href="#" class="nav-link" data-page="keroncong">Musik Keroncong</a>
+        <a href="#" class="nav-link" data-page="wayang">Wayang Kulit</a>
+        <a href="#" class="nav-link" data-page="kuliner">Kuliner Peranakan</a>
+        <a href="#" class="nav-link" data-page="barongsai"
+          >Kesenian Barongsai</a
+        >
+        <a href="#" class="nav-link" data-page="blenduk">Gereja Blenduk</a>
+        <a href="#" class="nav-link" data-page="gambang">Gambang Kromong</a>
+        <a href="#" class="nav-link" data-page="lasem">Batik Lasem</a>
+        <a href="#" class="nav-link" data-page="tabuik">Tradisi Tabuik</a>
+      </div>
     </header>
 
     <main class="container">
-        <!-- Home Page -->
-        <section id="home" class="page active">
-            <div class="hero">
-                <div class="hero-text">
-                    <h1>Selamat Datang di Alculturnation</h1>
-                    <p><strong>Visi:</strong> Menjadi sumber utama pengetahuan tentang kekayaan budaya akulturasi di Indonesia.</p>
-                    <p class="misi"><strong>Misi:</strong> Mengenalkan adanya budaya baru yang dihasilkan dari hasil dua budaya yang berhasil menyatu, menginspirasi apresiasi terhadap keberagaman dan harmoni.</p>
-                    <a href="#culture-list" class="btn">Jelajahi Budaya</a>
-                </div>
-                <div class="hero-image">
-                    <img src="ragam indonesia.jpg" alt="Ragam Budaya Indonesia">
-                </div>
-            </div>
+      <section id="home" class="page active">
+        <div class="hero">
+          <div class="hero-text">
+            <h1>Selamat Datang di Alculturnation</h1>
+            <p>
+              <strong>Visi:</strong> Menjadi sumber utama pengetahuan tentang
+              kekayaan budaya akulturasi di Indonesia.
+            </p>
+            <p class="misi">
+              <strong>Misi:</strong> Mengenalkan adanya budaya baru yang
+              dihasilkan dari hasil dua budaya yang berhasil menyatu,
+              menginspirasi apresiasi terhadap keberagaman dan harmoni.
+            </p>
+            <a href="#culture-list" class="btn">Jelajahi Budaya</a>
+          </div>
+          <div class="hero-image">
+            <img src="ragam indonesia.jpg" alt="Ragam Budaya Indonesia" />
+          </div>
+        </div>
 
-            <div id="culture-list">
-                <h2>Ragam Budaya Akulturasi</h2>
-                <div class="card-grid">
-                    <!-- Card 1: Kudus -->
-                    <div class="card">
-                        <img src="masjidMenaraKudus.jpg" alt="Masjid Menara Kudus">
-                        <div class="card-content">
-                            <h3 class="font-serif">Masjid Menara Kudus</h3>
-                            <p>Simbol arsitektur Islam di Indonesia yang berpadu dengan kearifan lokal Hindu-Buddha.</p>
-                            <a href="#" class="nav-link" data-page="kudus">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Card 2: Keroncong -->
-                    <div class="card">
-                        <img src="musikKeroncong.jpg" alt="Musik Keroncong">
-                        <div class="card-content">
-                            <h3 class="font-serif">Musik Keroncong</h3>
-                            <p>Alunan merdu perpaduan harmonis antara musik Portugis dan melodi khas Melayu Nusantara.</p>
-                            <a href="#" class="nav-link" data-page="keroncong">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Card 3: Wayang Kulit -->
-                    <div class="card">
-                        <img src="wayangKulit.jpg" alt="Wayang Kulit">
-                        <div class="card-content">
-                            <h3 class="font-serif">Wayang Kulit</h3>
-                            <p>Kisah epik dari India yang diceritakan melalui bayangan khas Jawa, kaya akan filosofi hidup.</p>
-                            <a href="#" class="nav-link" data-page="wayang">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Card 4: Kuliner -->
-                    <div class="card">
-                        <img src="peranakan.jpg" alt="Kuliner Peranakan">
-                        <div class="card-content">
-                            <h3 class="font-serif">Kuliner Peranakan</h3>
-                            <p>Cita rasa Tionghoa yang berpadu dengan kekayaan rempah Nusantara di dapur Indonesia.</p>
-                            <a href="#" class="nav-link" data-page="kuliner">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                     <!-- Card 5: Barongsai -->
-                    <div class="card">
-                        <img src="barongsai.jpg" alt="Kesenian Barongsai">
-                        <div class="card-content">
-                            <h3 class="font-serif">Kesenian Barongsai</h3>
-                            <p>Tarian singa dari Tiongkok yang menari lincah di tanah Garuda, menjadi simbol kebersamaan.</p>
-                            <a href="#" class="nav-link" data-page="barongsai">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Card 6: Gereja Blenduk -->
-                    <div class="card">
-                        <img src="gereja.jpg" alt="Gereja Blenduk">
-                        <div class="card-content">
-                            <h3 class="font-serif">Gereja Blenduk</h3>
-                            <p>Pesona arsitektur Neoklasik Eropa dengan kubah khasnya yang menyatu dengan sejarah Kota Lama Semarang.</p>
-                            <a href="#" class="nav-link" data-page="blenduk">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Card 7: Gambang Kromong -->
-                    <div class="card">
-                        <img src="gamelan.jpg" alt="Gambang Kromong">
-                        <div class="card-content">
-                            <h3 class="font-serif">Gambang Kromong</h3>
-                            <p>Harmoni ceria yang lahir dari perpaduan alat musik Tionghoa dengan gamelan khas Betawi.</p>
-                            <a href="#" class="nav-link" data-page="gambang">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Card 8: Batik Lasem -->
-                    <div class="card">
-                        <img src="batikLasem.jpg" alt="Batik Lasem">
-                        <div class="card-content">
-                            <h3 class="font-serif">Batik Lasem</h3>
-                            <p>Kain batik pesisir Jawa yang dihiasi motif naga dan warna merah cerah khas Tionghoa.</p>
-                            <a href="#" class="nav-link" data-page="lasem">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Card 9: Tradisi Tabuik -->
-                    <div class="card">
-                        <img src="tabuik.jpg" alt="Tradisi Tabuik">
-                        <div class="card-content">
-                            <h3 class="font-serif">Tradisi Tabuik</h3>
-                            <p>Festival megah peringatan Asyura di Pariaman, hasil perpaduan tradisi Islam Syiah dan adat Minang.</p>
-                            <a href="#" class="nav-link" data-page="tabuik">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="scroll-container">
+          <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Cari budaya..." />
+          </div>
 
-        <!-- Page: Masjid Menara Kudus -->
-        <section id="kudus" class="page">
-            <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1628178491593-979a4198309a?q=80&w=1964&auto=format&fit=crop" alt="Masjid Menara Kudus">
-                <h2 class="font-serif">Arsitektur Masjid Menara Kudus: Toleransi Hindu-Islam di Tanah Jawa</h2>
-                <div class="detail-content">
-                    <div>
-                        <h3>Sejarah</h3>
-                        <p>Masjid Menara Kudus, atau yang dikenal juga dengan nama Masjid Al-Aqsa Manarat Qudus, diperkirakan dibangun pada tahun 1549 M oleh Sunan Kudus, salah satu dari Walisongo. Pembangunan menara ini merupakan salah satu strategi dakwah Sunan Kudus yang mengedepankan pendekatan budaya dan toleransi...</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Islam (fungsi bangunan) dan Hindu-Buddha (arsitektur keagamaan Jawa).</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Islam:</b> Terlihat jelas pada fungsi bangunan sebagai masjid. Adanya ruang mihrab dan mimbar, serta penggunaan kaligrafi Arab.<br><b>Jejak Budaya Hindu-Buddha:</b> Sangat dominan pada arsitektur menara yang berbentuk seperti candi atau punden berundak dan penggunaan material batu bata merah.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Terciptalah sebuah kompleks masjid dengan menara yang unik, menjadi simbol arsitektur Islam di Indonesia yang berpadu dengan kearifan lokal.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, masih kokoh berdiri dan berfungsi sebagai tempat ibadah sekaligus destinasi wisata religi.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Jalan Menara, Desa Kauman, Kecamatan Kota Kudus, Kabupaten Kudus, Jawa Tengah.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <div id="culture-list">
+            <h2>Ragam Budaya Akulturasi</h2>
+            <div class="card-grid"></div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Page: Musik Keroncong -->
-        <section id="keroncong" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1619204996957-ad6d013f9909?q=80&w=1887&auto=format&fit=crop" alt="Musik Keroncong">
-                <h2 class="font-serif">Musik Keroncong: Alunan Merdu Perpaduan Portugis dan Melayu</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Musik Keroncong berawal dari kedatangan bangsa Portugis ke Nusantara pada abad ke-16. Para pelaut membawa serta alat musik dawai dan gaya musik fado. Di Kampung Tugu, Batavia, komunitas keturunan Portugis ini mengembangkan musik mereka yang kemudian berinteraksi dengan musik tradisional Melayu.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Portugis (instrumen dan harmoni) dan Melayu (irama dan gaya vokal).</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Portugis:</b> Masih kental dalam penggunaan instrumen utama seperti biola, gitar, dan ukulele. Progresi akornya juga mengikuti sistem harmoni musik Barat.<br><b>Jejak Budaya Melayu:</b> Terlihat pada ritme yang mendayu-dayu dan cengkok vokal penyanyinya yang sangat khas Melayu.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Lahirnya genre musik baru yang disebut Keroncong, dengan harmoni yang indah dan vokal yang khas Nusantara.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, musik keroncong masih eksis hingga kini dan memiliki komunitas penggemar yang setia.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Lahir di Batavia, berkembang pesat di berbagai daerah, terutama di Solo, Jawa Tengah.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page: Wayang Kulit -->
-        <section id="wayang" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1608223625206-817922b9f338?q=80&w=1887&auto=format&fit=crop" alt="Wayang Kulit">
-                <h2 class="font-serif">Wayang Kulit: Epos India dalam Bayangan Jawa</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Wayang merupakan seni pertunjukan asli Indonesia yang telah ada sebelum masuknya pengaruh Hindu-Buddha. Ketika kebudayaan Hindu dari India masuk, terjadi proses akulturasi. Para wali, terutama Sunan Kalijaga, kemudian menggunakan wayang sebagai media untuk menyebarkan ajaran Islam.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Jawa (konsep pertunjukan dan Punakawan), Hindu (cerita epik), dan Islam (nilai-nilai moral).</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Jawa (Asli):</b> Bentuk pertunjukan bayangan, iringan gamelan, dan kehadiran tokoh Punakawan (Semar, Gareng, Petruk, Bagong).<br><b>Jejak Budaya Hindu (India):</b> Kerangka cerita utama (lakon) dan nama-nama tokohnya berasal dari epos Mahabarata dan Ramayana.<br><b>Jejak Budaya Islam:</b> Terlihat dalam dialog dalang yang sering menyisipkan petuah dan falsafah hidup yang sejalan dengan ajaran Islam.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Seni pertunjukan wayang kulit yang kompleks, memadukan hiburan, mitologi, dan ajaran moral.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, wayang kulit masih hidup dan berkembang, bahkan telah diakui oleh UNESCO sebagai warisan budaya dunia.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Berkembang pesat di Jawa Tengah, Yogyakarta, dan Jawa Timur.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page: Kuliner Peranakan -->
-        <section id="kuliner" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1572656671313-640a23c8a9a0?q=80&w=1887&auto=format&fit=crop" alt="Kuliner Peranakan">
-                <h2 class="font-serif">Kuliner Peranakan: Cita Rasa Tionghoa di Dapur Nusantara</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Interaksi dan perkawinan antara imigran Tionghoa dengan penduduk lokal melahirkan sebuah komunitas dan budaya baru yang dikenal sebagai Peranakan. Akulturasi ini paling jelas terlihat dalam hidangan mereka.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Tionghoa (teknik memasak dan bahan dasar) dan Nusantara (bumbu rempah).</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p>Contoh pada <b>Bakso</b>:<br><b>Jejak Budaya Tionghoa:</b> Terlihat dari konsep bola daging (awalnya dari babi) yang disajikan dengan mi dan kuah kaldu. Namanya berasal dari bahasa Hokkian "Bak-so".<br><b>Jejak Budaya Nusantara:</b> Sangat kuat pada kuah kaldunya yang kaya rempah, penggunaan daging sapi, serta pelengkap wajib seperti bawang goreng, seledri, dan sambal.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Lahirnya aneka hidangan Peranakan yang lezat seperti Bakso, Nasi Goreng, dan Lumpia, yang kini telah dianggap sebagai makanan nasional Indonesia.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, kuliner Peranakan sangat populer dan menjadi bagian dari kuliner nasional Indonesia.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Dapat ditemukan di banyak kota di Indonesia, seperti Semarang, Lasem, Jakarta, Surabaya, Medan, dan Singkawang.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page: Kesenian Barongsai -->
-        <section id="barongsai" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1581822261290-c243a0429aa3?q=80&w=1887&auto=format&fit=crop" alt="Kesenian Barongsai">
-                <h2 class="font-serif">Kesenian Barongsai: Tarian Singa di Tanah Garuda</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Barongsai adalah tarian tradisional Tiongkok yang dibawa ke Indonesia oleh para imigran. Seiring waktu, kesenian ini tidak hanya ditampilkan di lingkungan komunitas Tionghoa, tetapi juga diterima dan bahkan dimainkan oleh masyarakat dari etnis lain.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Tionghoa (bentuk tarian dan musik) dan Indonesia (penamaan dan konteks sosial).</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Tionghoa:</b> Dominan pada bentuk fisik singa, gerakan akrobatik, serta iringan musik tabuhan tambur dan simbal. Makna aslinya sebagai pembawa keberuntungan tetap dipertahankan.<br><b>Jejak Budaya Indonesia:</b> Terlihat pada penamaannya, "Barong" merujuk pada kesenian topeng Barong dari Bali/Jawa. Kini Barongsai sering ditampilkan dalam acara nasional, menunjukkan inklusivitasnya.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Kesenian Barongsai yang menjadi bagian dari perayaan besar di Indonesia, tidak hanya saat Imlek, dan menjadi simbol kebersamaan.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, kesenian Barongsai sangat populer dan sering dipertunjukkan.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Dapat ditemukan di seluruh Indonesia, terutama di kota-kota dengan populasi Tionghoa yang besar.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Page: Gereja Blenduk -->
-        <section id="blenduk" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1596711929342-356a6442a537?q=80&w=1974&auto=format&fit=crop" alt="Gereja Blenduk">
-                <h2 class="font-serif">Arsitektur Gereja Blenduk: Pesona Eropa di Jantung Jawa</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Gereja Blenduk, gereja Kristen tertua di Jawa Tengah, dibangun pada tahun 1753. Arsitekturnya bergaya Neoklasik Eropa, dengan ciri khas kubah perunggu besar yang dalam bahasa Jawa disebut 'blenduk', yang kemudian menjadi nama populernya.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Arsitektur Eropa (Belanda/Portugis) dan budaya Jawa (konteks lokal dan penamaan).</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Eropa:</b> Sangat jelas pada gaya arsitektur Neoklasik, pilar-pilar besar, denah oktagonal, dan struktur bangunan gereja secara keseluruhan.<br><b>Jejak Budaya Jawa:</b> Terlihat dari nama "Blenduk" yang berasal dari bahasa Jawa. Keberadaannya di jantung Kota Lama Semarang menjadikannya bagian tak terpisahkan dari sejarah dan lanskap budaya Jawa.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Sebuah landmark arsitektur ikonik yang menjadi simbol toleransi, sejarah kolonial, dan perpaduan budaya di Semarang.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, masih aktif digunakan sebagai tempat ibadah dan merupakan salah satu tujuan wisata utama di Semarang.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Kawasan Kota Lama, Semarang, Jawa Tengah.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page: Gambang Kromong -->
-        <section id="gambang" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=2070&auto=format&fit=crop" alt="Gambang Kromong">
-                <h2 class="font-serif">Musik Gambang Kromong: Harmoni Tionghoa-Betawi</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Musik ini berkembang pesat di kalangan masyarakat Tionghoa Peranakan di sekitar Batavia (sekarang Jakarta) sejak abad ke-18. Orkestra ini merupakan wujud nyata perpaduan antara tradisi musik Tiongkok dengan gamelan lokal.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Musik Tionghoa dan musik pribumi Betawi/Sunda.</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Tionghoa:</b> Terlihat jelas dari penggunaan alat musik gesek seperti Tehyan, Kongahyan, dan Sukong, serta tangga nada pentatonik khas Tiongkok.<br><b>Jejak Budaya Betawi:</b> Dominan dalam penggunaan instrumen gamelan seperti gambang, kromong, gong, kempul, dan kendang.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Sebuah genre musik orkestra yang ceria dan khas, sering digunakan untuk mengiringi pertunjukan Lenong Betawi dan tari Cokek.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, musik ini masih terus dilestarikan oleh berbagai sanggar seni dan budaya Betawi, meskipun menghadapi tantangan dari musik modern.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Jakarta (Betawi) dan daerah sekitarnya seperti Depok, Bekasi, dan Tangerang.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page: Batik Lasem -->
-        <section id="lasem" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1558284549-56333919c9e2?q=80&w=1887&auto=format&fit=crop" alt="Batik Lasem">
-                <h2 class="font-serif">Batik Lasem: Merahnya Naga di Pesisir Jawa</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Sebagai salah satu kota pelabuhan tertua di pesisir utara Jawa, Lasem menjadi titik pertemuan budaya yang intens antara pedagang Tionghoa dan masyarakat Jawa. Akulturasi ini melahirkan corak batik yang sangat khas dan berbeda dari batik pedalaman.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Seni batik pesisir Jawa dan estetika serta simbolisme Tionghoa.</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Jawa:</b> Terlihat pada teknik pembuatan batik tulis itu sendiri yang menggunakan canting dan malam.<br><b>Jejak Budaya Tionghoa:</b> Sangat dominan pada penggunaan warna merah menyala (dikenal sebagai warna *getih pitik* atau darah ayam) dan motif-motif simbolis seperti naga, burung hong (phoenix), dan bunga krisan.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Kain batik dengan karakter kuat yang memadukan kehalusan proses batik Jawa dengan keberanian warna dan motif dari budaya Tionghoa, sering disebut sebagai "Batik Encim".</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, Batik Lasem sangat terkenal, menjadi salah satu warisan batik yang berharga dan terus diproduksi oleh para perajin hingga kini.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Lasem, Kabupaten Rembang, Jawa Tengah.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Page: Tradisi Tabuik -->
-        <section id="tabuik" class="page">
-             <div class="detail-page">
-                <img src="https://images.unsplash.com/photo-1634593322144-a95c517c376b?q=80&w=1932&auto=format&fit=crop" alt="Tradisi Tabuik">
-                <h2 class="font-serif">Tradisi Tabuik: Peringatan Asyura ala Minangkabau</h2>
-                <div class="detail-content">
-                     <div>
-                        <h3>Sejarah</h3>
-                        <p>Tradisi ini diperkirakan dibawa pada abad ke-19 oleh penganut Islam Syiah dari India (pasukan Sepoy) dan Persia ke Pariaman. Awalnya sebagai ritual keagamaan tertutup untuk memperingati wafatnya cucu Nabi Muhammad, Hussein bin Ali, tradisi ini kemudian berakulturasi dengan budaya lokal Minangkabau.</p>
-                    </div>
-                    <div>
-                        <h3>Budaya yang Bergabung</h3>
-                        <p>Tradisi Islam Syiah (dari India/Persia) dan budaya masyarakat adat Minangkabau.</p>
-                    </div>
-                    <div>
-                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
-                        <p><b>Jejak Budaya Islam Syiah:</b> Inti dari perayaan ini adalah peringatan hari Asyura (10 Muharram) dan prosesi mengarak Tabuik yang merupakan simbol dari keranda jenazah Hussein.<br><b>Jejak Budaya Minangkabau:</b> Terlihat pada bentuk Tabuik yang menjulang tinggi menyerupai menara atau rumah gadang, iringan musik Gandang Tasa yang ritmis, dan partisipasi seluruh elemen masyarakat adat Minang dalam festival.</p>
-                    </div>
-                     <div>
-                        <h3>Budaya yang Dihasilkan</h3>
-                        <p>Sebuah festival budaya dan religi tahunan yang unik dan megah, yang kini menjadi ikon pariwisata Pariaman dan simbol kebersamaan masyarakatnya.</p>
-                    </div>
-                    <div>
-                        <h3>Apakah Masih Ada Sampai Sekarang?</h3>
-                        <p>Ya, tradisi Tabuik diadakan setiap tahun pada bulan Muharram dalam kalender Islam dan menarik banyak wisatawan.</p>
-                    </div>
-                    <div>
-                        <h3>Lokasi</h3>
-                        <p>Kota Pariaman, Sumatera Barat.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="favorites" class="page">
+        <h2>Budaya Favorit Anda</h2>
+        <div id="favorite-list" class="card-grid">
+          <p class="no-favorites-message">
+            Anda belum menambahkan budaya favorit.
+          </p>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <p>&copy; 2025 Alculturnation. Dibuat untuk merayakan keberagaman budaya Indonesia.</p>
-        </div>
+      <div class="container footer-content">
+        <p>
+          &copy; 2025 Alculturnation. Dibuat untuk merayakan keberagaman budaya
+          Indonesia.
+        </p>
+      </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pages = document.querySelectorAll('.page');
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+    <button id="back-to-top-btn" title="Go to top">▲</button>
 
-            const showPage = (pageId) => {
-                // Sembunyikan semua halaman
-                pages.forEach(page => {
-                    page.classList.remove('active');
-                });
-
-                // Tampilkan halaman yang dipilih
-                const activePage = document.getElementById(pageId);
-                if (activePage) {
-                    activePage.classList.add('active');
-                }
-
-                // Update status aktif pada link navigasi
-                const allNavLinks = document.querySelectorAll('.nav-link'); // re-query all links including dropdown
-                allNavLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.dataset.page === pageId) {
-                        link.classList.add('active');
-                    }
-                });
-                 // Also set the main "Home" link active if we are on the home page
-                if(pageId === 'home') {
-                    document.querySelector('.nav-menu > .nav-link[data-page="home"]').classList.add('active');
-                }
-
-
-                // Gulir ke atas halaman
-                window.scrollTo(0, 0);
-
-                // Tutup menu mobile setelah navigasi
-                mobileMenu.classList.remove('active');
-            };
-
-            const allNavLinks = document.querySelectorAll('.nav-link');
-            allNavLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const pageId = this.dataset.page;
-                    showPage(pageId);
-                });
-            });
-
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('active');
-            });
-        });
-    </script>
-</body>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
-
