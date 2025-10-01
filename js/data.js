@@ -2,7 +2,7 @@
 const cultureData = [
   {
     id: "kudus",
-    imgSrc: "masjidMenaraKudus.jpg",
+    imgSrc: "images/masjidMenaraKudus.jpg",
     imgAlt: "Masjid Menara Kudus",
     title: "Masjid Menara Kudus",
     description: "Simbol arsitektur Islam di Indonesia yang berpadu dengan kearifan lokal Hindu-Buddha.",
@@ -16,7 +16,7 @@ const cultureData = [
   },
   {
     id: "keroncong",
-    imgSrc: "musikKeroncong.jpg",
+    imgSrc: "images/musikKeroncong.jpg",
     imgAlt: "Musik Keroncong",
     title: "Musik Keroncong",
     description: "Alunan merdu perpaduan harmonis antara musik Portugis dan melodi khas Melayu Nusantara.",
@@ -30,7 +30,7 @@ const cultureData = [
   },
   {
     id: "wayang",
-    imgSrc: "wayangKulit.jpg",
+    imgSrc: "images/wayangKulit.jpg",
     imgAlt: "Wayang Kulit",
     title: "Wayang Kulit",
     description: "Kisah epik dari India yang diceritakan melalui bayangan khas Jawa, kaya akan filosofi hidup.",
@@ -44,7 +44,7 @@ const cultureData = [
   },
   {
     id: "kuliner",
-    imgSrc: "peranakan.jpg",
+    imgSrc: "images/peranakan.jpg",
     imgAlt: "Kuliner Peranakan",
     title: "Kuliner Peranakan",
     description: "Cita rasa Tionghoa yang berpadu dengan kekayaan rempah Nusantara di dapur Indonesia.",
@@ -58,7 +58,7 @@ const cultureData = [
   },
   {
     id: "barongsai",
-    imgSrc: "barongsai.jpg",
+    imgSrc: "images/barongsai.jpg",
     imgAlt: "Kesenian Barongsai",
     title: "Kesenian Barongsai",
     description: "Tarian singa dari Tiongkok yang menari lincah di tanah Garuda, menjadi simbol kebersamaan.",
@@ -72,7 +72,7 @@ const cultureData = [
   },
   {
     id: "blenduk",
-    imgSrc: "gereja.jpg",
+    imgSrc: "images/gereja.jpg",
     imgAlt: "Gereja Blenduk",
     title: "Gereja Blenduk",
     description: "Pesona arsitektur Neoklasik Eropa dengan kubah khasnya yang menyatu dengan sejarah Kota Lama Semarang.",
@@ -84,10 +84,9 @@ const cultureData = [
       lokasi: "Kawasan Kota Lama, Semarang, Jawa Tengah."
     }
   },
-  // --- DATA YANG HILANG DIMULAI DARI SINI ---
   {
     id: "gambang",
-    imgSrc: "gamelan.jpg",
+    imgSrc: "images/gamelan.jpg",
     imgAlt: "Gambang Kromong",
     title: "Gambang Kromong",
     description: "Harmoni ceria yang lahir dari perpaduan alat musik Tionghoa dengan gamelan khas Betawi.",
@@ -101,7 +100,7 @@ const cultureData = [
   },
   {
     id: "lasem",
-    imgSrc: "batikLasem.jpg",
+    imgSrc: "images/batikLasem.jpg",
     imgAlt: "Batik Lasem",
     title: "Batik Lasem",
     description: "Kain batik pesisir Jawa yang dihiasi motif naga dan warna merah cerah khas Tionghoa.",
@@ -115,7 +114,7 @@ const cultureData = [
   },
   {
     id: "tabuik",
-    imgSrc: "tabuik.jpg",
+    imgSrc: "images/tabuik.jpg",
     imgAlt: "Tradisi Tabuik",
     title: "Tradisi Tabuik",
     description: "Festival megah peringatan Asyura di Pariaman, hasil perpaduan tradisi Islam Syiah dan adat Minang.",
