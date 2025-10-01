@@ -56,30 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
       "#culture-list .card-grid"
     );
 
-    const populateCultureCards = () => {
-      if (typeof cultureData !== "undefined") {
-        const cardsHTML = cultureData
-          .slice(0, 6)
-          .map(
-            (culture) => `
-                    <div class="card" data-id="${culture.id}">
-                        <img src="${culture.imgSrc}" alt="${culture.imgAlt}">
-                        <div class="card-content">
-                            <div class="card-title">
-                                <h3 class="font-serif">${culture.title}</h3>
-                                <span class="favorite-btn" data-id="${culture.id}">&#9733;</span>
-                            </div>
-                            <p>${culture.description}</p>
-                            </div>
-                    </div>
-                `
-          )
-          .join("");
-        cultureListContainer.innerHTML = cardsHTML;
-        updateAllFavoriteIcons();
-        // Fungsi pengurutan (renderCultureListOrder) telah dihapus dari sini
-      }
-    };
+  const populateCultureCards = () => {
+    if (typeof cultureData !== "undefined") {
+      const cardsHTML = cultureData 
+        .map(
+          (culture) => `
+            <a href="detail.html?id=${culture.id}" class="card-link">
+              <div class="card" data-id="${culture.id}">
+                  <img src="${culture.imgSrc}" alt="${culture.imgAlt}">
+                  <div class="card-content">
+                      <div class="card-title">
+                          <h3 class="font-serif">${culture.title}</h3>
+                          <span class="favorite-btn" data-id="${culture.id}">&#9733;</span>
+                      </div>
+                      <p>${culture.description}</p>
+                  </div>
+              </div>
+            </a>
+          `
+        )
+        .join("");
+      cultureListContainer.innerHTML = cardsHTML;
+      updateAllFavoriteIcons();
+    }
+  };
 
     // Fungsi renderCultureListOrder telah dihapus seluruhnya
 
@@ -98,16 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     searchBar.addEventListener("keyup", (e) => {
-      const searchTerm = e.target.value.toLowerCase();
-      const displayedCards = cultureData.slice(0, 6).map(item => item.id);
-      
-      cultureListContainer.querySelectorAll(".card").forEach((card) => {
-        if (displayedCards.includes(card.dataset.id)) {
-            const title = card.querySelector("h3").textContent.toLowerCase();
-            card.style.display = title.includes(searchTerm) ? "" : "none";
-        }
-      });
+    const searchTerm = e.target.value.toLowerCase();
+    
+    // Perulangan sekarang pada semua kartu, bukan hanya yang ditampilkan
+    cultureListContainer.querySelectorAll(".card-link").forEach((cardLink) => {
+        const card = cardLink.querySelector('.card');
+        const title = card.querySelector("h3").textContent.toLowerCase();
+        // Tampilkan/sembunyikan elemen <a> pembungkusnya
+        cardLink.style.display = title.includes(searchTerm) ? "" : "none";
     });
+  });
 
     populateCultureCards();
   }
@@ -155,5 +155,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     renderFavorites();
+  }
+
+  if (document.getElementById("detail-content-container")) {
+    const detailContainer = document.getElementById("detail-content-container");
+
+    const renderDetail = () => {
+        // Ambil ID dari URL (contoh: detail.html?id=kudus)
+        const params = new URLSearchParams(window.location.search);
+        const cultureId = params.get('id');
+
+        if (!cultureId) {
+            detailContainer.innerHTML = "<p>Budaya tidak ditemukan.</p>";
+            return;
+        }
+        
+        // Cari data budaya yang sesuai di cultureData
+        const culture = cultureData.find(item => item.id === cultureId);
+
+        if (!culture) {
+            detailContainer.innerHTML = "<p>Detail untuk budaya ini tidak ditemukan.</p>";
+            return;
+        }
+
+        // Buat HTML untuk halaman detail
+        document.title = `${culture.title} - Alculturnation`; // Update judul tab browser
+        const detailHTML = `
+            <div class="detail-page">
+                <img src="${culture.imgSrc}" alt="${culture.imgAlt}" class="detail-image">
+                <h2 class="font-serif">${culture.title}</h2>
+                <div class="detail-content">
+                    <div>
+                        <h3>Sejarah</h3>
+                        <p>${culture.details.sejarah}</p>
+                    </div>
+                    <div>
+                        <h3>Budaya yang Bergabung</h3>
+                        <p>${culture.details.budayaBergabung}</p>
+                    </div>
+                    <div>
+                        <h3>Jejak Budaya dalam Hasil Campurannya</h3>
+                        <p>${culture.details.jejakBudaya}</p>
+                    </div>
+                    <div>
+                        <h3>Budaya yang Dihasilkan</h3>
+                        <p>${culture.details.hasil}</p>
+                    </div>
+                    <div>
+                        <h3>Lokasi</h3>
+                        <p>${culture.details.lokasi}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        detailContainer.innerHTML = detailHTML;
+    };
+
+    renderDetail();
   }
 });
