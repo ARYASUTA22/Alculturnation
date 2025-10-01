@@ -1,0 +1,110 @@
+/* Home Page Hero Section */
+.hero {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #1e293b;
+  overflow: hidden;
+  display: grid;
+  min-height: 50vh; /* Tinggi untuk mobile */
+}
+.hero-text {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+.hero-text p {
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+.hero-text .misi {
+  margin-bottom: 1.5rem;
+}
+.hero-image {
+  display: none;
+} /* Sembunyikan gambar di mobile untuk fokus ke teks */
+.btn {
+  display: inline-block;
+  background-color: #f59e0b;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: fit-content;
+}
+.btn:hover {
+  background-color: #d97706;
+}
+
+/* Scroll container for content below hero */
+.scroll-container {
+  position: relative;
+  z-index: 2;
+  background-color: #334155;
+  padding-top: 2rem;
+}
+.search-container {
+  margin-bottom: 2rem;
+}
+#search-bar {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  box-sizing: border-box;
+}
+#search-bar:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.5);
+}
+
+/* Hero Styles for Desktop */
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .hero-text {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    z-index: 2;
+    background: linear-gradient(
+      to right,
+      rgba(30, 41, 59, 1) 20%,
+      rgba(30, 41, 59, 0.9) 50%,
+      rgba(30, 41, 59, 0) 75%
+    );
+    max-width: 60%;
+    height: 100%;
+    padding: 0 3rem;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .hero-image {
+    display: block;
+    grid-column: 1 / 3;
+    grid-row: 1;
+    z-index: 1;
+    opacity: 0.7;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

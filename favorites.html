@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites - Alculturnation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="home.html" class="logo">Alculturnation</a>
+          <div class="nav-menu">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="favorites.html" class="nav-link active">Favorites</a>
+          </div>
+          <button id="mobile-menu-button" class="mobile-menu-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="favorites.html" class="nav-link">Favorites</a>
+      </div>
+    </header>
+
+    <main class="container" style="padding-top: 2rem">
+      <section id="favorites">
+        <h2>Budaya Favorit Anda</h2>
+        <div id="favorite-list" class="card-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>
+          &copy; 2025 Alculturnation. Dibuat untuk merayakan keberagaman budaya
+          Indonesia.
+        </p>
+      </div>
+    </footer>
+
+    <button id="back-to-top-btn" title="Go to top">▲</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
