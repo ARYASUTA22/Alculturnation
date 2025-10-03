@@ -14,13 +14,14 @@
     />
   </head>
   <body>
-    <header class="header">
+        <header class="header">
       <div class="container">
         <nav class="navbar">
           <a href="home.html" class="logo">Alculturnation</a>
           <div class="nav-menu">
             <a href="home.html" class="nav-link active">Home</a>
             <a href="favorites.html" class="nav-link">Favorites</a>
+            <a href="#contact-section" class="nav-link">Contact</a>
           </div>
           <button id="mobile-menu-button" class="mobile-menu-button">
             <svg
@@ -28,7 +29,7 @@
               height="24"
               width="24"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 24"
               stroke="currentColor"
             >
               <path
@@ -44,6 +45,7 @@
       <div id="mobile-menu" class="mobile-menu">
         <a href="home.html" class="nav-link">Home</a>
         <a href="favorites.html" class="nav-link">Favorites</a>
+        <a href="#contact-section" class="nav-link">Contact</a>
       </div>
     </header>
 
@@ -51,7 +53,7 @@
       <section id="home">
         <div class="hero">
           <div class="hero-text">
-            <h1>Selamat Datang di Alculturnation</h1>
+            <h1>Selamat Datang di <span class="highlight">Alculturnation</span></h1>
             <p>
               <strong>Visi:</strong> Menjadi sumber utama pengetahuan tentang
               kekayaan budaya akulturasi di Indonesia.
@@ -60,11 +62,11 @@
               <strong>Misi:</strong> Mengenalkan budaya baru hasil perpaduan dua
               budaya, menginspirasi apresiasi terhadap keberagaman.
             </p>
-            <a href="#culture-list" class="btn">Jelajahi Budaya</a>
+            <a href="#search-bar" class="btn">Jelajahi Budaya</a>
           </div>
           <div class="hero-image">
             <video autoplay loop muted playsinline poster="ragam indonesia.jpg">
-              <source src="videos/background-video.mp4" type="video/mp4">
+              <source src="videos/background-video.mp4" type="video/mp4" />
               Browser Anda tidak mendukung tag video.
             </video>
           </div>
@@ -76,10 +78,40 @@
           </div>
 
           <div id="culture-list" class="container">
-            <h2>Ragam Budaya Akulturasi</h2>
-            <div class="card-grid"></div>
+            <h2 class="fade-up">Ragam Budaya Akulturasi</h2>
+
+            <div class="iframe-container">
+              <div class="card-grid"></div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section id="contact-section" class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+            <h2 class="fade-up">Hubungi Kami</h2>
+            <h3 class="fade-up" style="text-align: center; font-family: 'Playfair Display', serif; font-size: 1.75rem; margin-top: 1rem; color: #f1f5f9; font-weight: normal;">Make your Story</h3>
+            <p class="fade-up" style="text-align: center; color: #94a3b8; margin-top: -0.5rem; margin-bottom: 2rem; font-style: italic;">because every story is relevant to us</p>
+            <p class="fade-up" style="text-align: center; max-width: 600px; margin: 0 auto 2.5rem auto; color: #94a3b8;">
+                Punya pertanyaan, masukan, atau ingin berkolaborasi? Kami senang mendengar dari Anda!
+            </p>
+            <form id="contact-form" class="contact-form fade-up">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Nama lengkap Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+            <div id="success-message" style="display: none; text-align: center; margin-top: 1.5rem; padding: 1rem; background-color: rgba(245, 158, 11, 0.1); border: 1px solid #f59e0b; border-radius: 0.5rem; color: #f59e0b; font-weight: 600;">
+                Terima kasih! Pesan Anda telah berhasil dikirim.
+            </div>
       </section>
     </main>
 

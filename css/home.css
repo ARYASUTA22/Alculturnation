@@ -20,6 +20,10 @@
   margin-bottom: 1rem;
   color: #f1f5f9;
 }
+
+.hero-text h1 .highlight {
+  color: #f59e0b; /* Orange color for the highlighted text */
+}
 .hero-text p {
   color: #94a3b8;
   margin-bottom: 0.5rem;
@@ -107,4 +111,33 @@
     height: 100%;
     object-fit: cover;
   }
+}
+/* Container Gulir Mirip Iframe */
+.iframe-container {
+  height: 70vh; /* Tinggi container, bisa disesuaikan */
+  overflow-y: scroll;
+  border: 1px solid #475569; /* Garis tepi opsional */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #1a2433; /* Sedikit bedakan warna latar */
+}
+
+/* Kustomisasi Scrollbar untuk Browser Webkit (Chrome, Safari) */
+.iframe-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.iframe-container::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 10px;
+}
+
+.iframe-container::-webkit-scrollbar-thumb {
+  background-color: #f59e0b;
+  border-radius: 10px;
+  border: 3px solid #1e293b;
+}
+
+.iframe-container::-webkit-scrollbar-thumb:hover {
+  background-color: #d97706;
 }

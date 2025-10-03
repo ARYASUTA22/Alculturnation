@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorites - Alculturnation</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +21,7 @@
           <div class="nav-menu">
             <a href="home.html" class="nav-link">Home</a>
             <a href="favorites.html" class="nav-link active">Favorites</a>
+            <a href="home.html#contact-section" class="nav-link">Contact</a>
           </div>
           <button id="mobile-menu-button" class="mobile-menu-button">
             <svg
@@ -27,7 +29,7 @@
               height="24"
               width="24"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 24"
               stroke="currentColor"
             >
               <path
@@ -42,15 +44,20 @@
       </div>
       <div id="mobile-menu" class="mobile-menu">
         <a href="home.html" class="nav-link">Home</a>
-        <a href="favorites.html" class="nav-link">Favorites</a>
+        <a href="favorites.html" class="nav-link active">Favorites</a>
+        <a href="home.html#contact-section" class="nav-link">Contact</a>
       </div>
     </header>
 
-    <main class="container" style="padding-top: 2rem">
+    <main class="container" style="padding-top: 4rem">
       <section id="favorites">
-        <h2>Budaya Favorit Anda</h2>
+        <h2 class="fade-up">Budaya Favorit Anda</h2>
         <div id="favorite-list" class="card-grid"></div>
       </section>
+
+      <div class="back-button-container">
+        <a href="home.html" class="btn-back">Kembali ke Home &rarr;</a>
+      </div>
     </main>
 
     <footer>
@@ -68,3 +75,4 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
